@@ -541,7 +541,7 @@ public class Base64Hex extends BaseNCodec {
 	 * @return Array containing decoded data.
 	 * @since 1.4
 	 */
-	public static byte[] decodeBase64(final String base64String) {
+	public static byte[] decodeBase64Hex(final String base64String) {
 		return new Base64Hex().decode(base64String);
 	}
 
@@ -552,7 +552,7 @@ public class Base64Hex extends BaseNCodec {
 	 *            Byte array containing Base64 data
 	 * @return Array containing decoded data.
 	 */
-	public static byte[] decodeBase64(final byte[] base64Data) {
+	public static byte[] decodeBase64Hex(final byte[] base64Data) {
 		return new Base64Hex().decode(base64Data);
 	}
 
@@ -568,7 +568,7 @@ public class Base64Hex extends BaseNCodec {
 	 * @since 1.4
 	 */
 	public static BigInteger decodeInteger(final byte[] pArray) {
-		return new BigInteger(1, decodeBase64(pArray));
+		return new BigInteger(1, decodeBase64Hex(pArray));
 	}
 
 	/**
